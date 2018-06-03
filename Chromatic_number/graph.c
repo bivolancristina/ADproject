@@ -11,6 +11,7 @@ void set_adj_matrix_value(struct a_graph *graph, int row_index, int column_index
     *(graph->adj_matrix + position) = element_value;
 }
 void init_graph(struct a_graph *graph){
+    ///\ reading graph from keyboard
     int iterator_rows;
     int iterator_columns;
     int aux;
@@ -32,6 +33,7 @@ void init_graph(struct a_graph *graph){
 }
 
 void init_graph_file(struct a_graph *graph){
+    ///\ reading graph from file
     FILE *file_in;
     int iterator_rows;
     int iterator_columns;
@@ -91,7 +93,7 @@ void print_adj_matrix(struct a_graph *graph){
     }
 }
 int adj_check(struct a_graph *graph, int node_1, int node_2){
-
+ ///\ checking if node_1 is adjacent with node_2
     if(get_adj_matrix_value(graph,node_1,node_2)==1){
         return 1;
     }else{
