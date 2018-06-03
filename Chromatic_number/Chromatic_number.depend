@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1528036059 source:c:\users\crist\desktop\adproject\chromatic_number\algorithms.c
+	<stdio.h>
+	<stdlib.h>
+	"graph.h"
+	"algorithms.h"
+
+1528036365 c:\users\crist\desktop\adproject\chromatic_number\graph.h
+
+1528036002 c:\users\crist\desktop\adproject\chromatic_number\algorithms.h
+
+1528036262 source:c:\users\crist\desktop\adproject\chromatic_number\graph.c
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+	"graph.h"
+
+1528036135 source:c:\users\crist\desktop\adproject\chromatic_number\main.c
+	<stdio.h>
+	<stdlib.h>
+	"graph.h"
+	"algorithms.h"
+
