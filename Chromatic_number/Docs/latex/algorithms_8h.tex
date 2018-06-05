@@ -1,0 +1,92 @@
+\hypertarget{algorithms_8h}{}\section{C\+:/\+Users/crist/\+One\+Drive/\+Documente/\+Git\+Hub/\+A\+Dproject/\+Chromatic\+\_\+number/algorithms.h File Reference}
+\label{algorithms_8h}\index{C\+:/\+Users/crist/\+One\+Drive/\+Documente/\+Git\+Hub/\+A\+Dproject/\+Chromatic\+\_\+number/algorithms.\+h@{C\+:/\+Users/crist/\+One\+Drive/\+Documente/\+Git\+Hub/\+A\+Dproject/\+Chromatic\+\_\+number/algorithms.\+h}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{algorithms_8h_a78c0d3ce53182f46e4853925b900d899}{chromatic\+\_\+number\+\_\+greedy} (struct \hyperlink{structa__graph}{a\+\_\+graph} $\ast$graph)
+\item 
+void \hyperlink{algorithms_8h_a473dfff5ae7b5718f3a2128f5c97564d}{print\+\_\+chromatic\+\_\+number} (int $\ast$colors, struct \hyperlink{structa__graph}{a\+\_\+graph} $\ast$graph)
+\item 
+int \hyperlink{algorithms_8h_a13616a391a2da6b2a850bdc0238f9af7}{check\+\_\+same\+\_\+color} (int node, struct \hyperlink{structa__graph}{a\+\_\+graph} $\ast$graph, int $\ast$colors, int color)
+\item 
+int \hyperlink{algorithms_8h_ab8b8548d9cc60f1ca072ad71209e58a4}{recursive\+\_\+backtracking\+\_\+coloring} (struct \hyperlink{structa__graph}{a\+\_\+graph} $\ast$graph, int max\+\_\+no\+\_\+colors, int $\ast$colors, int node)
+\item 
+int \hyperlink{algorithms_8h_a58819dea2e8da394c81d9be2cd002532}{chromatic\+\_\+number\+\_\+backtracking} (struct \hyperlink{structa__graph}{a\+\_\+graph} $\ast$graph, int max\+\_\+no\+\_\+colors)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{algorithms_8h_a13616a391a2da6b2a850bdc0238f9af7}\label{algorithms_8h_a13616a391a2da6b2a850bdc0238f9af7}} 
+\index{algorithms.\+h@{algorithms.\+h}!check\+\_\+same\+\_\+color@{check\+\_\+same\+\_\+color}}
+\index{check\+\_\+same\+\_\+color@{check\+\_\+same\+\_\+color}!algorithms.\+h@{algorithms.\+h}}
+\subsubsection{\texorpdfstring{check\+\_\+same\+\_\+color()}{check\_same\_color()}}
+{\footnotesize\ttfamily int check\+\_\+same\+\_\+color (\begin{DoxyParamCaption}\item[{int}]{node,  }\item[{struct \hyperlink{structa__graph}{a\+\_\+graph} $\ast$}]{graph,  }\item[{int $\ast$}]{colors,  }\item[{int}]{color }\end{DoxyParamCaption})}
+
+\textbackslash{} checking if node\+\_\+1 and node\+\_\+2 are adjacent and have the same color 
+
+Definition at line 73 of file algorithms.\+c.
+
+\mbox{\Hypertarget{algorithms_8h_a58819dea2e8da394c81d9be2cd002532}\label{algorithms_8h_a58819dea2e8da394c81d9be2cd002532}} 
+\index{algorithms.\+h@{algorithms.\+h}!chromatic\+\_\+number\+\_\+backtracking@{chromatic\+\_\+number\+\_\+backtracking}}
+\index{chromatic\+\_\+number\+\_\+backtracking@{chromatic\+\_\+number\+\_\+backtracking}!algorithms.\+h@{algorithms.\+h}}
+\subsubsection{\texorpdfstring{chromatic\+\_\+number\+\_\+backtracking()}{chromatic\_number\_backtracking()}}
+{\footnotesize\ttfamily int chromatic\+\_\+number\+\_\+backtracking (\begin{DoxyParamCaption}\item[{struct \hyperlink{structa__graph}{a\+\_\+graph} $\ast$}]{graph,  }\item[{int}]{max\+\_\+no\+\_\+colors }\end{DoxyParamCaption})}
+
+solving chromatic number using backtracking calling the functions created before
+
+Backtracking is a general algorithm for finding all (or some) solutions to some computational problems,-- --notably constraint satisfaction problems,that incrementally builds candidates to the solutions, and abandons a candidate-- --(\char`\"{}backtracks\char`\"{}) as soon as it determines that the candidate cannot possibly be completed to a valid solution.
+
+Definition at line 110 of file algorithms.\+c.
+
+\mbox{\Hypertarget{algorithms_8h_a78c0d3ce53182f46e4853925b900d899}\label{algorithms_8h_a78c0d3ce53182f46e4853925b900d899}} 
+\index{algorithms.\+h@{algorithms.\+h}!chromatic\+\_\+number\+\_\+greedy@{chromatic\+\_\+number\+\_\+greedy}}
+\index{chromatic\+\_\+number\+\_\+greedy@{chromatic\+\_\+number\+\_\+greedy}!algorithms.\+h@{algorithms.\+h}}
+\subsubsection{\texorpdfstring{chromatic\+\_\+number\+\_\+greedy()}{chromatic\_number\_greedy()}}
+{\footnotesize\ttfamily void chromatic\+\_\+number\+\_\+greedy (\begin{DoxyParamCaption}\item[{struct \hyperlink{structa__graph}{a\+\_\+graph} $\ast$}]{graph }\end{DoxyParamCaption})}
+
+Colors the graph and prints the colors, using the greedy algorithm A greedy algorithm is an algorithmic paradigm that follows the problem-- --solving heuristic of making the locally optimal choice at each stage with the hope of finding a global optimum
+
+\textbackslash{} var $\ast$colors -\/vector for storing the colors
+
+\textbackslash{} var min\+\_\+of\+\_\+colors minimum number of colors needed to color--chromatic number
+
+Initialized as 1, becouse we need at least 1 color for every graph posible
+
+Initially every node will have the color 1
+
+We go through all the nodes before the \char`\"{}ierator\+\_\+1\char`\"{} node
+
+Check if the nodes \char`\"{}ierator\+\_\+1\char`\"{} -\/ \char`\"{}iterator\+\_\+2\char`\"{} are adjacent and if they have same color.
+
+we add 1 to the color-\/ changing the color to the next one
+
+repeat until we found the first node color that it\textquotesingle{}s not already the color of an adjecent node to the node \char`\"{}iterator\+\_\+1\char`\"{} 
+
+Definition at line 7 of file algorithms.\+c.
+
+\mbox{\Hypertarget{algorithms_8h_a473dfff5ae7b5718f3a2128f5c97564d}\label{algorithms_8h_a473dfff5ae7b5718f3a2128f5c97564d}} 
+\index{algorithms.\+h@{algorithms.\+h}!print\+\_\+chromatic\+\_\+number@{print\+\_\+chromatic\+\_\+number}}
+\index{print\+\_\+chromatic\+\_\+number@{print\+\_\+chromatic\+\_\+number}!algorithms.\+h@{algorithms.\+h}}
+\subsubsection{\texorpdfstring{print\+\_\+chromatic\+\_\+number()}{print\_chromatic\_number()}}
+{\footnotesize\ttfamily void print\+\_\+chromatic\+\_\+number (\begin{DoxyParamCaption}\item[{int $\ast$}]{colors,  }\item[{struct \hyperlink{structa__graph}{a\+\_\+graph} $\ast$}]{graph }\end{DoxyParamCaption})}
+
+
+
+Definition at line 50 of file algorithms.\+c.
+
+\mbox{\Hypertarget{algorithms_8h_ab8b8548d9cc60f1ca072ad71209e58a4}\label{algorithms_8h_ab8b8548d9cc60f1ca072ad71209e58a4}} 
+\index{algorithms.\+h@{algorithms.\+h}!recursive\+\_\+backtracking\+\_\+coloring@{recursive\+\_\+backtracking\+\_\+coloring}}
+\index{recursive\+\_\+backtracking\+\_\+coloring@{recursive\+\_\+backtracking\+\_\+coloring}!algorithms.\+h@{algorithms.\+h}}
+\subsubsection{\texorpdfstring{recursive\+\_\+backtracking\+\_\+coloring()}{recursive\_backtracking\_coloring()}}
+{\footnotesize\ttfamily int recursive\+\_\+backtracking\+\_\+coloring (\begin{DoxyParamCaption}\item[{struct \hyperlink{structa__graph}{a\+\_\+graph} $\ast$}]{graph,  }\item[{int}]{max\+\_\+no\+\_\+colors,  }\item[{int $\ast$}]{colors,  }\item[{int}]{node }\end{DoxyParamCaption})}
+
+graph coloring using recursion we use var max\+\_\+no\+\_\+colors for storing the maximum number of colors a graph can have which is the number of nodes
+
+\textbackslash{} if checking same color is true we assign the color to the node
+
+\textbackslash{} assigning colors to rest of the nodes
+
+If the color color\+\_\+iterator can\textquotesingle{}t lead to a solution, remove it 
+
+Definition at line 84 of file algorithms.\+c.
+

@@ -1,0 +1,85 @@
+\hypertarget{graph_8c}{}\section{C\+:/\+Users/crist/\+One\+Drive/\+Documente/\+Git\+Hub/\+A\+Dproject/\+Chromatic\+\_\+number/graph.c File Reference}
+\label{graph_8c}\index{C\+:/\+Users/crist/\+One\+Drive/\+Documente/\+Git\+Hub/\+A\+Dproject/\+Chromatic\+\_\+number/graph.\+c@{C\+:/\+Users/crist/\+One\+Drive/\+Documente/\+Git\+Hub/\+A\+Dproject/\+Chromatic\+\_\+number/graph.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}graph.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{graph_8c_a00f28714cd67d8162c954b41d06b4e59}{set\+\_\+adj\+\_\+matrix\+\_\+value} (struct \hyperlink{structa__graph}{a\+\_\+graph} $\ast$graph, int row\+\_\+index, int column\+\_\+index, int element\+\_\+value)
+\item 
+void \hyperlink{graph_8c_a54df15b4cc6c7aded9b8b13bcb07e604}{init\+\_\+graph} (struct \hyperlink{structa__graph}{a\+\_\+graph} $\ast$graph)
+\item 
+void \hyperlink{graph_8c_a804078ffa0a091dd7ac2624efbdbbdf1}{init\+\_\+graph\+\_\+file} (struct \hyperlink{structa__graph}{a\+\_\+graph} $\ast$graph)
+\item 
+int \hyperlink{graph_8c_a5e3af398ad6a5afcce4190f3bd34c317}{get\+\_\+adj\+\_\+matrix\+\_\+value} (struct \hyperlink{structa__graph}{a\+\_\+graph} $\ast$graph, int row\+\_\+index, int column\+\_\+index)
+\item 
+void \hyperlink{graph_8c_a1055426c9c20ea9689be866c23704678}{print\+\_\+adj\+\_\+matrix} (struct \hyperlink{structa__graph}{a\+\_\+graph} $\ast$graph)
+\item 
+int \hyperlink{graph_8c_af9a44ccb4205b20f59ea3ccde593e2a2}{adj\+\_\+check} (struct \hyperlink{structa__graph}{a\+\_\+graph} $\ast$graph, int node\+\_\+1, int node\+\_\+2)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{graph_8c_af9a44ccb4205b20f59ea3ccde593e2a2}\label{graph_8c_af9a44ccb4205b20f59ea3ccde593e2a2}} 
+\index{graph.\+c@{graph.\+c}!adj\+\_\+check@{adj\+\_\+check}}
+\index{adj\+\_\+check@{adj\+\_\+check}!graph.\+c@{graph.\+c}}
+\subsubsection{\texorpdfstring{adj\+\_\+check()}{adj\_check()}}
+{\footnotesize\ttfamily int adj\+\_\+check (\begin{DoxyParamCaption}\item[{struct \hyperlink{structa__graph}{a\+\_\+graph} $\ast$}]{graph,  }\item[{int}]{node\+\_\+1,  }\item[{int}]{node\+\_\+2 }\end{DoxyParamCaption})}
+
+\textbackslash{} checking if node\+\_\+1 is adjacent with node\+\_\+2 
+
+Definition at line 102 of file graph.\+c.
+
+\mbox{\Hypertarget{graph_8c_a5e3af398ad6a5afcce4190f3bd34c317}\label{graph_8c_a5e3af398ad6a5afcce4190f3bd34c317}} 
+\index{graph.\+c@{graph.\+c}!get\+\_\+adj\+\_\+matrix\+\_\+value@{get\+\_\+adj\+\_\+matrix\+\_\+value}}
+\index{get\+\_\+adj\+\_\+matrix\+\_\+value@{get\+\_\+adj\+\_\+matrix\+\_\+value}!graph.\+c@{graph.\+c}}
+\subsubsection{\texorpdfstring{get\+\_\+adj\+\_\+matrix\+\_\+value()}{get\_adj\_matrix\_value()}}
+{\footnotesize\ttfamily int get\+\_\+adj\+\_\+matrix\+\_\+value (\begin{DoxyParamCaption}\item[{struct \hyperlink{structa__graph}{a\+\_\+graph} $\ast$}]{graph,  }\item[{int}]{row\+\_\+index,  }\item[{int}]{column\+\_\+index }\end{DoxyParamCaption})}
+
+
+
+Definition at line 71 of file graph.\+c.
+
+\mbox{\Hypertarget{graph_8c_a54df15b4cc6c7aded9b8b13bcb07e604}\label{graph_8c_a54df15b4cc6c7aded9b8b13bcb07e604}} 
+\index{graph.\+c@{graph.\+c}!init\+\_\+graph@{init\+\_\+graph}}
+\index{init\+\_\+graph@{init\+\_\+graph}!graph.\+c@{graph.\+c}}
+\subsubsection{\texorpdfstring{init\+\_\+graph()}{init\_graph()}}
+{\footnotesize\ttfamily void init\+\_\+graph (\begin{DoxyParamCaption}\item[{struct \hyperlink{structa__graph}{a\+\_\+graph} $\ast$}]{graph }\end{DoxyParamCaption})}
+
+\textbackslash{} reading graph from keyboard 
+
+Definition at line 14 of file graph.\+c.
+
+\mbox{\Hypertarget{graph_8c_a804078ffa0a091dd7ac2624efbdbbdf1}\label{graph_8c_a804078ffa0a091dd7ac2624efbdbbdf1}} 
+\index{graph.\+c@{graph.\+c}!init\+\_\+graph\+\_\+file@{init\+\_\+graph\+\_\+file}}
+\index{init\+\_\+graph\+\_\+file@{init\+\_\+graph\+\_\+file}!graph.\+c@{graph.\+c}}
+\subsubsection{\texorpdfstring{init\+\_\+graph\+\_\+file()}{init\_graph\_file()}}
+{\footnotesize\ttfamily void init\+\_\+graph\+\_\+file (\begin{DoxyParamCaption}\item[{struct \hyperlink{structa__graph}{a\+\_\+graph} $\ast$}]{graph }\end{DoxyParamCaption})}
+
+\textbackslash{} reading graph from file 
+
+Definition at line 36 of file graph.\+c.
+
+\mbox{\Hypertarget{graph_8c_a1055426c9c20ea9689be866c23704678}\label{graph_8c_a1055426c9c20ea9689be866c23704678}} 
+\index{graph.\+c@{graph.\+c}!print\+\_\+adj\+\_\+matrix@{print\+\_\+adj\+\_\+matrix}}
+\index{print\+\_\+adj\+\_\+matrix@{print\+\_\+adj\+\_\+matrix}!graph.\+c@{graph.\+c}}
+\subsubsection{\texorpdfstring{print\+\_\+adj\+\_\+matrix()}{print\_adj\_matrix()}}
+{\footnotesize\ttfamily void print\+\_\+adj\+\_\+matrix (\begin{DoxyParamCaption}\item[{struct \hyperlink{structa__graph}{a\+\_\+graph} $\ast$}]{graph }\end{DoxyParamCaption})}
+
+
+
+Definition at line 84 of file graph.\+c.
+
+\mbox{\Hypertarget{graph_8c_a00f28714cd67d8162c954b41d06b4e59}\label{graph_8c_a00f28714cd67d8162c954b41d06b4e59}} 
+\index{graph.\+c@{graph.\+c}!set\+\_\+adj\+\_\+matrix\+\_\+value@{set\+\_\+adj\+\_\+matrix\+\_\+value}}
+\index{set\+\_\+adj\+\_\+matrix\+\_\+value@{set\+\_\+adj\+\_\+matrix\+\_\+value}!graph.\+c@{graph.\+c}}
+\subsubsection{\texorpdfstring{set\+\_\+adj\+\_\+matrix\+\_\+value()}{set\_adj\_matrix\_value()}}
+{\footnotesize\ttfamily void set\+\_\+adj\+\_\+matrix\+\_\+value (\begin{DoxyParamCaption}\item[{struct \hyperlink{structa__graph}{a\+\_\+graph} $\ast$}]{graph,  }\item[{int}]{row\+\_\+index,  }\item[{int}]{column\+\_\+index,  }\item[{int}]{element\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Definition at line 6 of file graph.\+c.
+
