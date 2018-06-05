@@ -14,7 +14,6 @@ struct a_list_node{
 };
 void set_adj_matrix_value(struct a_graph *graph, int row_index, int column_index, int element_value);
 void init_graph(struct a_graph *graph);
-void write_graph_file(struct a_graph *graph);
 void init_graph_file(struct a_graph *graph);
 int get_adj_matrix_value(struct a_graph *graph, int row_index, int column_index);
 void print_adj_matrix(struct a_graph *graph);
