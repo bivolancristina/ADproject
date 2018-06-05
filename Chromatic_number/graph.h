@@ -8,10 +8,7 @@ struct a_graph {
     int *adj_matrix;
 };
 
-struct a_list_node{
-    int info;
-    struct a_list_node *next;
-};
+
 void set_adj_matrix_value(struct a_graph *graph, int row_index, int column_index, int element_value);
 void init_graph(struct a_graph *graph);
 void init_graph_file(struct a_graph *graph);
