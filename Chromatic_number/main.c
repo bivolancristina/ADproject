@@ -11,6 +11,7 @@ int main(){
 
     int choose_algorithm;///\var choose_algorithm for chosing which algorithm to use
 
+
     graph=calloc(1, sizeof(struct a_graph));///Allocate memory dynamically to the graph
     printf("\n");
     printf("Choose how to read graph :\n");
@@ -22,8 +23,10 @@ int main(){
 
     if(choose_algorithm == 1)
         init_graph(graph);
-        else
+        else{
+            write_graph_file(graph);
             init_graph_file(graph);
+        }
 
     print_adj_matrix(graph);
      ///Solve chromatic number with one of the algorithms by choice.

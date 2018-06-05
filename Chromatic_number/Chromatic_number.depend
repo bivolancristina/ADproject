@@ -21,3 +21,26 @@
 	"graph.h"
 	"algorithms.h"
 
+1528047672 source:c:\users\crist\onedrive\documente\github\adproject\chromatic_number\algorithms.c
+	<stdio.h>
+	<stdlib.h>
+	"graph.h"
+	"algorithms.h"
+
+1528193602 c:\users\crist\onedrive\documente\github\adproject\chromatic_number\graph.h
+
+1528045710 c:\users\crist\onedrive\documente\github\adproject\chromatic_number\algorithms.h
+
+1528196114 source:c:\users\crist\onedrive\documente\github\adproject\chromatic_number\graph.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<assert.h>
+	"graph.h"
+
+1528193653 source:c:\users\crist\onedrive\documente\github\adproject\chromatic_number\main.c
+	<stdio.h>
+	<stdlib.h>
+	"graph.h"
+	"algorithms.h"
+
