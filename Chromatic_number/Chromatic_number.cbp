@@ -43,7 +43,7 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="test.in" />
-		<Unit filename="test1.in" />
+		<Unit filename="test.out" />
 		<Extensions>
 			<code_completion />
 			<debugger />

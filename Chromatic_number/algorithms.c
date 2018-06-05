@@ -9,6 +9,12 @@ void chromatic_number_greedy(struct a_graph *graph){
 A greedy algorithm is an algorithmic paradigm that follows the problem--
  --solving heuristic of making the locally optimal choice at each stage with the hope of finding a global optimum
     */
+    FILE *file_out;
+     file_out = fopen("test.out", "w");
+    if (file_out == NULL){
+        fclose(file_out);
+        return;
+    }
     int iterator_1;
     int iterator_2;
     int *colors;///\ var *colors -vector for storing the colors
@@ -33,26 +39,35 @@ A greedy algorithm is an algorithmic paradigm that follows the problem--
 
     printf("\n");
     for(iterator_1=0;iterator_1<graph->no_nodes;iterator_1++){
-        printf("Node [%d] is colored with color %d \n",iterator_1 , *(colors + iterator_1));
+            printf("Node [%d] is colored with color %d \n",iterator_1 , *(colors + iterator_1));
+        fprintf(file_out,"Node [%d] is colored with color %d \n",iterator_1 , *(colors + iterator_1));
     }
     printf("Minimun of colors : %d\n", min_of_colors);
+    fprintf(file_out,"Minimum of colors : %d\n", min_of_colors);
 }
 
 
 void print_chromatic_number(int *colors, struct a_graph *graph){
-
+    FILE *file_out;
+     file_out = fopen("test.out", "w");
+    if (file_out == NULL){
+        fclose(file_out);
+        return;
+    }
     int iterator;
     int min_of_colors;
 
     min_of_colors=0;
     for(iterator=0;iterator<graph->no_nodes;iterator++){
-        printf("Node[%d] is colored with color %d \n",iterator , *(colors + iterator));
+      printf("Node[%d] is colored with color %d \n",iterator , *(colors + iterator));
+        fprintf(file_out,"Node[%d] is colored with color %d \n",iterator , *(colors + iterator));
         if(*(colors + iterator)> min_of_colors){
              min_of_colors=*(colors + iterator);
         }
     }
-    printf("\n");
     printf("Colors needed : %d\n", min_of_colors);
+    fprintf(file_out,"Colors needed : %d\n", min_of_colors);
+    fclose(file_out);
 }
 
 int check_same_color(int node, struct a_graph *graph, int *colors, int color){

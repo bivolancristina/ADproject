@@ -24,7 +24,6 @@ int main(){
     if(choose_algorithm == 1)
         init_graph(graph);
         else{
-            write_graph_file(graph);
             init_graph_file(graph);
         }
 

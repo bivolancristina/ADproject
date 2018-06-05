@@ -32,37 +32,6 @@ void init_graph(struct a_graph *graph){
 
         }
 }
-void write_graph_file(struct a_graph *graph){
-     FILE *file_in;
-    int iterator_rows;
-    int iterator_columns;
-    int aux;
-    time_t t;
-    srand((unsigned) time(&t));
-     file_in = fopen("test.in", "w");
-    if (file_in == NULL){
-        printf("\n File does not exist.");
-        fclose(file_in);
-        return;
-    }
-
-    graph->no_nodes=1 + rand() % 5;
-      fwrite(&graph,sizeof(struct a_graph),1,file_in);
-    graph->init = 1;
-    graph->adj_matrix = calloc(graph->no_nodes * graph->no_nodes, sizeof(int));
-
-    assert((graph->no_nodes * graph->no_nodes) > 0);
-
-    for (iterator_rows = 0; iterator_rows < graph->no_nodes; iterator_rows++ ){
-        for (iterator_columns = 0; iterator_columns < graph->no_nodes; iterator_columns++ ){
-            aux=rand()%2;
-            fprintf(file_in, "%d ", aux);
-        }
-    }
-    fclose(file_in);
-    printf("=== Writing file successfull ===\n");
-
-}
 
 void init_graph_file(struct a_graph *graph){
     ///\ reading graph from file
@@ -70,24 +39,29 @@ void init_graph_file(struct a_graph *graph){
     int iterator_rows;
     int iterator_columns;
     int aux;
-
+    time_t t;
+    srand((unsigned) time(&t));
     file_in = fopen("test.in", "r+");
     if (file_in == NULL){
         printf("\n File does not exist.");
         fclose(file_in);
         return;
     }
+     graph->no_nodes=1 + rand() % 5;
+      fwrite(&graph,sizeof(struct a_graph),1,file_in);
     fscanf(file_in, "%d", &graph->no_nodes);
-    printf("nr noduri %d",graph->no_nodes);
     graph->init = 1;
     graph->adj_matrix = calloc(graph->no_nodes * graph->no_nodes, sizeof(int));
 
     assert((graph->no_nodes * graph->no_nodes) > 0);
 
-    for (iterator_rows = 0; iterator_rows < graph->no_nodes; iterator_rows++ ){
-        for (iterator_columns = 0; iterator_columns < graph->no_nodes; iterator_columns++ ){
+    for (iterator_rows = 0; iterator_rows < graph->no_nodes-1; iterator_rows++ ){
+        for (iterator_columns = (iterator_rows+1); iterator_columns< graph->no_nodes; iterator_columns++ ){
+             aux=rand()%2;
+            fprintf(file_in, "%d ", aux);
             fscanf(file_in, "%d ", &aux);
             set_adj_matrix_value(graph, iterator_rows, iterator_columns, aux);
+            set_adj_matrix_value(graph, iterator_columns, iterator_rows, aux);
         }
     }
     fclose(file_in);
